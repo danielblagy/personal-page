@@ -15,7 +15,7 @@ function ProfileDisplay() {
   return (
     <div className='ProfileDisplay'>
       <p>
-        <img src={avatarUrl} width='250px' alt='Profile'/>
+        <img id='profileImg' src={avatarUrl} width='250px' alt='Profile'/>
       </p>
       
       <p>

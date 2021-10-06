@@ -15,3 +15,7 @@ body {
   flex-wrap: no wrap;
   justify-content: space-evenly;
 }
+
+#profileImg {
+  border-radius: 50%;
+}
