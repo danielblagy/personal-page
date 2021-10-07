@@ -1,15 +1,15 @@
 import ProfileDisplay from './components/ProfileDisplay'
-import Navigation from './components/Navigation'
-import Content from './components/Content'
+import ContentDisplay from './components/ContentDisplay'
 
 function App() {
   return (
   <div className='App'>
     <ProfileDisplay />
-    <Navigation />
-    <Content />
+    <ContentDisplay />
   </div>
   );
 }
 
 export default App
+
+// nice color #628079
