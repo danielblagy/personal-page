@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import ProfileImage from './ProfileImage'
 
 function ProfileDisplay() {
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -14,13 +15,8 @@ function ProfileDisplay() {
   
   return (
     <div className='ProfileDisplay'>
-      <p>
-        <img id='profileImg' src={avatarUrl} width='250px' alt='Profile'/>
-      </p>
-      
-      <h2>
-        Daniel Blagy
-      </h2>
+      <ProfileImage avatarUrl={avatarUrl} />
+      <h2>Daniel Blagy</h2>
     </div>
   )
 }

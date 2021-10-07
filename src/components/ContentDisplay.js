@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Content from './Content'
 import Button from '@mui/material/Button'
+import {AiFillYoutube, AiOutlineYoutube, AiFillInstagram, AiFillGithub, AiFillBook} from 'react-icons/ai'
 
 function ContentDisplay() {
   
@@ -20,11 +21,11 @@ function ContentDisplay() {
   
   return (
     <div className='ContentDisplay'>
-      <p className='navbar'>
-        <Button onClick={() => {transitionTo('youtube')}} variant='contained' color='primary'>Youtube</Button>
-        <Button onClick={() => {transitionTo('instagram')}} variant='contained' color='primary'>Instagram</Button>
-        <Button onClick={() => {transitionTo('github')}} variant='contained' color='primary'>Github</Button>
-        <Button onClick={() => {transitionTo('about')}} variant='contained' color='primary'>About</Button>
+      <p className='navigation'>
+        <Button onClick={() => {transitionTo('youtube')}} variant='contained' color='primary' startIcon={<AiFillYoutube />}>Youtube</Button>
+        <Button onClick={() => {transitionTo('instagram')}} variant='contained' color='primary' startIcon={<AiFillInstagram />}>Instagram</Button>
+        <Button onClick={() => {transitionTo('github')}} variant='contained' color='primary' startIcon={<AiFillGithub />}>Github</Button>
+        <Button onClick={() => {transitionTo('about')}} variant='contained' color='primary' startIcon={<AiFillBook />}>About</Button>
       </p>
       
       <div className={fade}>
