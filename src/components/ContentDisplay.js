@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Content from './Content'
+import Button from '@mui/material/Button'
 
 function ContentDisplay() {
   
@@ -19,11 +20,11 @@ function ContentDisplay() {
   
   return (
     <div className='ContentDisplay'>
-      <p>
-        <button onClick={() => {transitionTo('youtube')}}>Youtube</button>
-        <button onClick={() => {transitionTo('instagram')}}>Instagram</button>
-        <button onClick={() => {transitionTo('github')}}>Github</button>
-        <button onClick={() => {transitionTo('about')}}>About</button>
+      <p className='navbar'>
+        <Button onClick={() => {transitionTo('youtube')}} variant='contained' color='primary'>Youtube</Button>
+        <Button onClick={() => {transitionTo('instagram')}} variant='contained' color='primary'>Instagram</Button>
+        <Button onClick={() => {transitionTo('github')}} variant='contained' color='primary'>Github</Button>
+        <Button onClick={() => {transitionTo('about')}} variant='contained' color='primary'>About</Button>
       </p>
       
       <div className={fade}>

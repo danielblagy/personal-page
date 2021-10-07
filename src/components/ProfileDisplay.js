@@ -18,9 +18,9 @@ function ProfileDisplay() {
         <img id='profileImg' src={avatarUrl} width='250px' alt='Profile'/>
       </p>
       
-      <p>
+      <h2>
         Daniel Blagy
-      </p>
+      </h2>
     </div>
   )
 }
