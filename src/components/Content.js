@@ -6,7 +6,7 @@ import AboutSection from './AboutSection'
 function Content({currentSection}) {
   if (currentSection === 'youtube') {
     return (
-      <div className='fade-in'>
+      <div>
         <YoutubeSection />
       </div>
     )
@@ -14,7 +14,7 @@ function Content({currentSection}) {
   
   else if (currentSection === 'instagram') {
     return (
-      <div className='fade-in'>
+      <div>
         <InstagramSection />
       </div>
     )
@@ -22,7 +22,7 @@ function Content({currentSection}) {
   
   else if (currentSection === 'github') {
     return (
-      <div className='fade-in'>
+      <div>
         <GithubSection />
       </div>
     )
@@ -30,7 +30,7 @@ function Content({currentSection}) {
   
   else if (currentSection === 'about') {
     return (
-      <div className='fade-in'>
+      <div>
         <AboutSection />
       </div>
     )
@@ -38,7 +38,7 @@ function Content({currentSection}) {
   
   else {
     return (
-      <div className='fade-out'>
+      <div>
         
       </div>
     )

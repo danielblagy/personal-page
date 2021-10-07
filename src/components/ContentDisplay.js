@@ -1,36 +1,32 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Content from './Content'
 
 function ContentDisplay() {
   
   const [currentSection, setCurrentSection] = useState('')
+  const [fade, setFade] = useState('fade-out')
   
-  function switchToYoutubeSection() {
-    setCurrentSection('youtube')
+  function transitionTo(section) {
+    setFade('fade-out')
+    setTimeout(() => { setCurrentSection(section) }, 1000);
   }
   
-  function switchToInstagramSection() {
-    setCurrentSection('instagram')
-  }
-  
-  function switchToGithubSection() {
-    setCurrentSection('github')
-  }
-  
-  function switchToAboutSection() {
-    setCurrentSection('about')
-  }
+  useEffect(() => {
+    setFade('fade-in')
+  }, [currentSection])
   
   return (
     <div className='ContentDisplay'>
       <p>
-        <button onClick={switchToYoutubeSection}>Youtube</button>
-        <button onClick={switchToInstagramSection}>Instagram</button>
-        <button onClick={switchToGithubSection}>Github</button>
-        <button onClick={switchToAboutSection}>About</button>
+        <button onClick={() => {transitionTo('youtube')}}>Youtube</button>
+        <button onClick={() => {transitionTo('instagram')}}>Instagram</button>
+        <button onClick={() => {transitionTo('github')}}>Github</button>
+        <button onClick={() => {transitionTo('about')}}>About</button>
       </p>
       
-      <Content currentSection={currentSection} />
+      <div className={fade}>
+        <Content currentSection={currentSection} />
+      </div>
     </div>
   )
   }
