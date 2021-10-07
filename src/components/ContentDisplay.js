@@ -7,8 +7,10 @@ function ContentDisplay() {
   const [fade, setFade] = useState('fade-out')
   
   function transitionTo(section) {
+    if (currentSection === section) return
+    
     setFade('fade-out')
-    setTimeout(() => { setCurrentSection(section) }, 1000);
+    setTimeout(() => { setCurrentSection(section) }, 500);
   }
   
   useEffect(() => {
