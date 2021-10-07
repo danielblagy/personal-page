@@ -5,43 +5,23 @@ import AboutSection from './AboutSection'
 
 function Content({currentSection}) {
   if (currentSection === 'youtube') {
-    return (
-      <div>
-        <YoutubeSection />
-      </div>
-    )
+    return <YoutubeSection />
   }
   
   else if (currentSection === 'instagram') {
-    return (
-      <div>
-        <InstagramSection />
-      </div>
-    )
+    return <InstagramSection />
   }
   
   else if (currentSection === 'github') {
-    return (
-      <div>
-        <GithubSection />
-      </div>
-    )
+    return <GithubSection />
   }
   
   else if (currentSection === 'about') {
-    return (
-      <div>
-        <AboutSection />
-      </div>
-    )
+    return <AboutSection />
   }
   
   else {
-    return (
-      <div>
-        
-      </div>
-    )
+    return null
   }
 }
 
