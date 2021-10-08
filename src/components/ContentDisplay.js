@@ -22,9 +22,23 @@ function ContentDisplay() {
   return (
     <div className='ContentDisplay'>
       <p className='navigation'>
-        <Button onClick={() => {transitionTo('public')}} variant='contained' color='primary' startIcon={<AiFillHeart />}>Public</Button>
-        <Button onClick={() => {transitionTo('github')}} variant='contained' color='primary' startIcon={<AiFillGithub />}>Github</Button>
-        <Button onClick={() => {transitionTo('about')}} variant='contained' color='primary' startIcon={<AiFillBook />}>About</Button>
+        <Button
+          onClick={() => {transitionTo('public')}}
+          variant='contained'
+          color={currentSection === 'public' ? 'secondary' : 'primary'}
+          startIcon={<AiFillHeart />}>Public</Button>
+        
+        <Button
+          onClick={() => {transitionTo('github')}}
+          variant='contained'
+          color={currentSection === 'github' ? 'secondary' : 'primary'}
+          startIcon={<AiFillGithub />}>Github</Button>
+          
+        <Button
+          onClick={() => {transitionTo('about')}}
+          variant='contained'
+          color={currentSection === 'about' ? 'secondary' : 'primary'}
+          startIcon={<AiFillBook />}>About</Button>
       </p>
       
       <div className={fade}>

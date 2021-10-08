@@ -9,6 +9,10 @@ function App() {
       primary: {
         main: '#628079'
       },
+      
+      secondary: {
+        main: '#254c4c'
+      },
     },
   })
   
