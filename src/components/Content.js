@@ -1,15 +1,10 @@
-import YoutubeSection from './YoutubeSection'
-import InstagramSection from './InstagramSection'
+import PublicSection from './PublicSection'
 import GithubSection from './GithubSection'
 import AboutSection from './AboutSection'
 
 function Content({currentSection}) {
-  if (currentSection === 'youtube') {
-    return <YoutubeSection />
-  }
-  
-  else if (currentSection === 'instagram') {
-    return <InstagramSection />
+  if (currentSection === 'public') {
+    return <PublicSection />
   }
   
   else if (currentSection === 'github') {
