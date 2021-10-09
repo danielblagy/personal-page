@@ -46,7 +46,7 @@ function GithubSection() {
           </ListItem>
         </List>
         
-        <br/>
+        <h3>Popular Repositories:</h3>
                 
         {reposData == null ? 'Fetching repos data...' : getPopularReposDisplay()}
       </>
@@ -56,6 +56,8 @@ function GithubSection() {
   function getPopularReposDisplay() {
     
     let popularRepos = [...reposData]
+    
+    popularRepos = popularRepos.filter(repo => (repo.stargazers_count + repo.forks_count) > 0)
     
     popularRepos.sort((a, b) => {
       const aPopularity = a.stargazers_count + a.forks_count
