@@ -8,7 +8,6 @@ function ProfileDisplay() {
     fetch('http://api.github.com/users/danielblagy')
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       setAvatarUrl(data.avatar_url)
     });
   }, [])

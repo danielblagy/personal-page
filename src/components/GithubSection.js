@@ -14,7 +14,6 @@ function GithubSection() {
     fetch('http://api.github.com/users/danielblagy')
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       setUserData(data)
     });
   }, [])
@@ -25,7 +24,6 @@ function GithubSection() {
     fetch(userData.repos_url)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       setReposData(data)
     });
   }, [userData])
