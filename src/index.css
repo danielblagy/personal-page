@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: no wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 #profileImg {
@@ -34,5 +34,13 @@ body {
   flex-direction: row;
   flex-wrap: no wrap;
   column-gap: 30px;
+  justify-content: center;
+}
+
+.list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no wrap;
   justify-content: center;
 }

@@ -13,6 +13,7 @@ function PublicSection() {
       <p>
         I make videos on the things I'm passionate and curious about.
       </p>
+      <p>Channel name: Daniel Blagy</p>
       <Button
         onClick={() => {goToWebsite('https://www.youtube.com/channel/UCI_FXyNaHvWN5Bu3ma4EVRw/')}}
         variant='contained'
@@ -26,6 +27,7 @@ function PublicSection() {
       <p>
         This is the best way to contact me.
       </p>
+      <p>IG handle: @danielblagy</p>
       <Button
         onClick={() => {goToWebsite('https://www.instagram.com/danielblagy/')}}
         variant='contained'
