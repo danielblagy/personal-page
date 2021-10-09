@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import Content from './Content'
 import Button from '@mui/material/Button'
-import {AiFillHeart, AiOutlineHeart, AiFillYoutube, AiFillInstagram, AiFillGithub, AiFillBook} from 'react-icons/ai'
+import {AiFillHeart, AiFillGithub, AiFillBook} from 'react-icons/ai'
 
 function ContentDisplay() {
   

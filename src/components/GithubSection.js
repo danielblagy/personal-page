@@ -1,6 +1,9 @@
 import {useState, useEffect} from 'react'
 import Link from '@mui/material/Link'
-import Stack from '@mui/material/Stack';
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
+import RepoDisplay from './RepoDisplay'
 
 function GithubSection() {
   
@@ -33,16 +36,19 @@ function GithubSection() {
       <>
         <h3>{userData.login}</h3>
         
-        <div style={{display: 'inline-block', textAlign: 'left'}}>
-          Followers: {userData.followers}<br/>
-          Public Repos: {userData.public_repos}
-        </div>
+        <List style={{display: 'inline-block', textAlign: 'left'}}>
+          <ListItem>
+            <ListItemText primary={userData.followers} secondary='followers' />
+          </ListItem>
+          
+          <ListItem>
+            <ListItemText primary={userData.public_repos} secondary='public repositories' />
+          </ListItem>
+        </List>
         
         <p><Link href={userData.html_url} color='inherit'>{userData.html_url}</Link></p>
         
-        <p>
-          {reposData == null ? 'Fetching repos data...' : getPopularReposDisplay()}
-        </p>
+        {reposData == null ? 'Fetching repos data...' : getPopularReposDisplay()}
       </>
     )
   }
@@ -50,9 +56,11 @@ function GithubSection() {
   function getPopularReposDisplay() {
     
     return (
-      <>
-        popular repos
-      </>
+      <List style={{display: 'inline-block', textAlign: 'left', flexWrap: 'wrap'}} sx={{maxWidth: '300px'}}>
+        {reposData.map((repo, index) => {
+          return <RepoDisplay key={index} repo={repo} />
+        })}
+      </List>
     )
   }
   
