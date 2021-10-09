@@ -11,7 +11,7 @@ function GithubSection() {
   const [reposData, setReposData] = useState(null)
   
   useEffect(() => {
-    fetch('http://api.github.com/users/danielblagy')
+    fetch('https://api.github.com/users/danielblagy')
     .then(response => response.json())
     .then(data => {
       setUserData(data)

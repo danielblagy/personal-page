@@ -5,7 +5,7 @@ function ProfileDisplay() {
   const [avatarUrl, setAvatarUrl] = useState('')
   
   useEffect(() => {
-    fetch('http://api.github.com/users/danielblagy')
+    fetch('https://api.github.com/users/danielblagy')
     .then(response => response.json())
     .then(data => {
       setAvatarUrl(data.avatar_url)
