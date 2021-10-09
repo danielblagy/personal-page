@@ -34,7 +34,7 @@ function GithubSection() {
     
     return (
       <>
-        <h3>{userData.login}</h3>
+        <h3><Link href={userData.html_url} color='inherit'>{userData.html_url}</Link></h3>
         
         <List style={{display: 'inline-block', textAlign: 'left'}}>
           <ListItem>
@@ -46,8 +46,8 @@ function GithubSection() {
           </ListItem>
         </List>
         
-        <p><Link href={userData.html_url} color='inherit'>{userData.html_url}</Link></p>
-        
+        <br/>
+                
         {reposData == null ? 'Fetching repos data...' : getPopularReposDisplay()}
       </>
     )
@@ -55,9 +55,22 @@ function GithubSection() {
   
   function getPopularReposDisplay() {
     
+    let popularRepos = [...reposData]
+    
+    popularRepos.sort((a, b) => {
+      const aPopularity = a.stargazers_count + a.forks_count
+      const bPopularity = b.stargazers_count + b.forks_count
+      
+      if (aPopularity < bPopularity) return 1
+      if (aPopularity > bPopularity) return -1
+      return 0
+    })
+    
+    popularRepos = popularRepos.slice(0, 5)
+    
     return (
-      <List style={{display: 'inline-block', textAlign: 'left', flexWrap: 'wrap'}} sx={{maxWidth: '300px'}}>
-        {reposData.map((repo, index) => {
+      <List style={{display: 'inline-block', textAlign: 'left', flexWrap: 'wrap'}} sx={{maxWidth: '360px'}}>
+        {popularRepos.map((repo, index) => {
           return <RepoDisplay key={index} repo={repo} />
         })}
       </List>
