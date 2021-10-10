@@ -63,9 +63,9 @@ function AboutSection() {
       <br/>
       
       <h3 style={{display: 'inline-block', textAlign: 'right'}}>
-        Bluebird
+        <i>Bluebird</i>
         <br/>
-        Charles Bukowski
+        <i>Charles Bukowski</i>
       </h3>
     </div>
   )
